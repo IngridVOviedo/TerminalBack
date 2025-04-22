@@ -44,6 +44,22 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
+// Mostrar noticias
+document.addEventListener('DOMContentLoaded', function() {
+    const showMoreNewsBtn = document.getElementById('showMoreNews');
+    const additionalNews = document.querySelectorAll('.additional-news');
+
+    showMoreNewsBtn.addEventListener('click', function() {
+        //se muestran las noticias adicionales
+        additionalNews.forEach(news => {
+            news.classList.remove('d-none')
+        });
+
+        //ocultar
+        showMoreNewsBtn.style.display= 'none';
+    })
+})
+;
 // Función para simular compra de boleto
 function buyTicket(route, price) {
     var ticketModal = new bootstrap.Modal(document.getElementById('ticketModal'));
